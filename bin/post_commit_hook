@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ -e .commit ]; then
+    rm .commit
+    bin/build_pdf
+    git add static/pdf/*
+    git commit --amend -C HEAD --no-verify --no-edit
+fi
+exit

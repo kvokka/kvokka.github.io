@@ -31,11 +31,11 @@ p, address {
 }
 
 .me {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
     margin-bottom: 20px;
 }
 
@@ -124,7 +124,7 @@ em {
 
     body {
         font-size: 14pt;
-        line-height: 21pt;
+        line-height: 24pt;
     }
 
     .container > header {
@@ -135,6 +135,11 @@ em {
     article > header > span {
         font-size: 80%;
         line-height: 80%;
+    }
+
+    .unprinted {
+        display: none;
+        
     }
 }
 

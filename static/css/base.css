@@ -115,6 +115,17 @@
 	li { line-height: 18px; margin-bottom: 12px; }
 	ul.large li { line-height: 21px; }
 	li p { line-height: 21px; }
+	ul > li { margin-left: 1em;margin-top: 0.8em;margin-bottom: 0.8em; }
+	ul > li:before{ content: "\f00c";
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-decoration: inherit;
+		padding-right: 1em;
+        top: 0.5em;
+        left: 0;
+	}
+
 
 /* #Images
 ================================================== */
@@ -265,5 +276,13 @@
 	.remove-bottom { margin-bottom: 0 !important; }
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
+	.icons > p { margin-left: 1.5em; }
+	.icons > p > i:before {
+		position: absolute;
+		display: block;
+		margin-left: -2em;
+		margin-top: -0.8em;	}
 
-
+	.container.container-slim {
+		margin-top: 1em;
+	}

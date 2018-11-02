@@ -1,41 +1,47 @@
+# My CV
 
-# Vitae
+Jekyll based template, based on Markdown & Liquid and deployed to GitHub Pages.
 
-[![Build Status](https://secure.travis-ci.org/jekyller/vitae.png?branch=gh-pages)](http://travis-ci.org/jekyller/vitae)
+This template contain scripts to auto re-generate `pdf` version of CV after each commit.
 
-Personal homepage (curriculum vitae or resume) based on [João's](https://github.com/joaomoreno/resume).
-Vitae is built with [skeleton](http://getskeleton.com/), powered by [Jekyll](http://jekyllrb.com/) and freely
-hosted in [Github pages](https://pages.github.com/).
+## How to use it locally
 
+### Run
 
-## View the live demo
+```
+$ bundle install
+$ jekyll serve
+```
 
-[Vitae Live Demo](https://jekyller.github.io/vitae)
+### Edit
 
+The template contain pdf file, which is re-generated automatically after each commit, but for using this magic you will need:
 
-## Screenshots
+```
+$ overcommit --install
+$ overcommit --sign
+```
 
-![resume page](https://raw.githubusercontent.com/jekyller/vitae/gh-pages/assets/images/vitae_screen.png)
+You may find useful livereload feature: `jekyll server --livereload` ()
 
+If at the commiting moment you have `jekyll server` it will be used, otherwise
+the `jekyll server` will be up and down only for the commit (but it is quick)
 
-## How to use it
-
-Simply clone/fork this repository, and then run `jekyll serve` inside the directory.
 Edit the site attributes in *_config.yml* and edit the various entries in *_includes/*.
 
-## Issues and contributing
+To manually build pdf use `bin\build_pdf`. It fail is been used as commit hook
+with every commit to rebuild pdf file.
 
-I have tested this install with Ruby v2.4.2p198 (Mac OS RVM) and Jekyll v3.6.2. If you run into any problems please log them on the [issue tracker](https://github.com/jekyller/vitae/issues).
+## Used versions
+
+I have tested this install with:
+
+* Ruby v2.4.1
+* Jekyll v3.8.4
+* wkhtmltopdf 0.12.5
+* Chrome 69.0.3497.100 (for livereload feature)
 
 Feel free pull-request your patches and fixes.
-
-
-## Thanks
-
-A lot of the work had been already done by the Joao. Many thanks to him :smile:
-
-Profile picture from [pexels](https://www.pexels.com/photo/portrait-black-african-ethnicity-person-9494/).
-
 
 ## Copyright & License
 
