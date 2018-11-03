@@ -4,6 +4,8 @@ Jekyll based template, based on Markdown & Liquid and deployed to GitHub Pages.
 
 This template contain scripts to auto re-generate `pdf` version of CV after each commit.
 
+By default it will be used local installation of `wkhtmltopdf` tool. If you want to use from the docker container, you have to run first `echo DOCKER=1 >> .env`.
+
 ## How to use it locally
 
 ### Run
@@ -39,7 +41,10 @@ I have tested this install with:
 * Ruby v2.4.1
 * Jekyll v3.8.4
 * wkhtmltopdf 0.12.5
+* Docker version 18.06.1-ce, build e68fc7a
 * Chrome 69.0.3497.100 (for livereload feature)
+
+You do not need all this tools for up and running.
 
 Feel free pull-request your patches and fixes.
 
