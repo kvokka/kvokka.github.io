@@ -9,6 +9,9 @@ Gemfile.lock
 # webstorm
 .idea/
 
+# vendor
+vendor/*
+
 # others
 *.swp
 .commit

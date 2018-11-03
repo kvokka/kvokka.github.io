@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+JEKYLL_PORT=${JEKYLL_PORT:-4000}
+PDF_PATH=${PDF_PATH:-static/pdf/}
+JEKYLL_VERSION=${JEKYLL_VERSION:-3.8}
+BUNDLE_PATH=${BUNDLE_PATH:-$PWD/vendor/bundle}
+
+mkdir -p $PDF_PATH
+
+function create_pdf {
+    docker run \
+        surnet/alpine-wkhtmltopdf:3.7-0.12.5-small \
+        host.docker.internal:$JEKYLL_PORT --print-media-type - > $PDF_PATH/cv.pdf
+}
+
+function wait_port() {
+    port=$1
+    echo Waiting for up
+    until $(docker run --rm byrnedo/alpine-curl \
+                --output /dev/null \
+                --silent \
+                --head \
+                --fail \
+                http://host.docker.internal:$port); do
+        printf '.'
+        sleep 0.1
+    done
+    echo
+}
+
+if [[ -n $(lsof -i :$JEKYLL_PORT) ]];then
+    create_pdf
+else
+    JEKYLL_CONTAINER_SHA=$(bin/jekylld s)
+    wait_port $JEKYLL_PORT
+    create_pdf
+    docker kill $JEKYLL_CONTAINER_SHA &>/dev/null
+fi

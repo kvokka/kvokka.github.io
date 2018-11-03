@@ -2,7 +2,7 @@
 
 if [ -e .commit ]; then
     rm .commit
-    bin/build_pdf
+    bin/build
     git add static/pdf/*
     git commit --amend -C HEAD --no-verify --no-edit
 fi

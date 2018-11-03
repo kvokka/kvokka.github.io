@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+JEKYLL_VERSION=${JEKYLL_VERSION:-3.8}
+JEKYLL_IMAGE=${JEKYLL_IMAGE:-jekyll/jekyll}
+
+IMAGE="JEKYLL_IMAGE:$JEKYLL_VERSION"
+
+docker kill $(docker ps -a -q --filter ancestor=$IMAGE --format="{{.ID}}")
+
+echo "All containers from ancestor $IMAGE stopped."

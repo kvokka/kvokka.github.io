@@ -1,18 +1,32 @@
 # My CV
 
-Jekyll based template, based on Markdown & Liquid and deployed to GitHub Pages.
+Jekyll based template, fully dockerized, based on Markdown & Liquid and deployed to GitHub Pages.
 
 This template contain scripts to auto re-generate `pdf` version of CV after each commit.
 
-By default it will be used local installation of `wkhtmltopdf` tool. If you want to use from the docker container, you have to run first `echo DOCKER=1 >> .env`.
-
 ## How to use it locally
+
+### Environment variables
+
+All variables are optional, and it will be convenient to store then in `.env` file, which is loaded by default by plenty about of shells (for example `zsh` use `dotenv` plugin for it).
+
+* `JEKYLL_PORT` is port on the host machine, default - `4000`
+* `PDF_PATH` if the path in the project where the compiled version of the `pdf` will be stored, default - `static/pdf/`
+* `JEKYLL_VERSION`, default - 3.8
+* `JEKYLL_CONTAINER`, default - `jekyll/jekyll`
+* `BUNDLE_PATH` jekyll under the hood is using gems, like any other Ruby tool, so you may want to store it in the same place with your system gems to keep it DRY. But the path of your gem storage may vary from system to system, so you have to select it manually, ot it will be stored in the project folder (excluded from git). Get the actual paths of your gem storages you can with `gem environment`, default - `$PWD/vendor/bundle`
+
+### Tools
+
+* `bin/build` build pdf. Will use existed jekyll if possible, otherwise run daemon only for this operation.
+* `bin/jekyll` for usage jekyll as a service.
+* `bin/jekylld` for usage jekyll as a daemon.
+* `bin/stop_all` stop all jekyll running containers.
 
 ### Run
 
 ```
-$ bundle install
-$ jekyll serve
+$ bin/jekyll serve --livereload
 ```
 
 ### Edit
@@ -20,33 +34,32 @@ $ jekyll serve
 The template contain pdf file, which is re-generated automatically after each commit, but for using this magic you will need:
 
 ```
+$ bundle install
 $ overcommit --install
 $ overcommit --sign
+$ overcommit --sign post-commit
 ```
 
-You may find useful livereload feature: `jekyll server --livereload` ()
-
-If at the commiting moment you have `jekyll server` it will be used, otherwise
-the `jekyll server` will be up and down only for the commit (but it is quick)
+If at the moment when the commit begin's you already have
+`bin/jekyll server` on `$JEKYLL_PORT` then it will be used,
+otherwise the `bin/jekyll server` will be up and down only for
+the commit (but it is quick)
 
 Edit the site attributes in *_config.yml* and edit the various entries in *_includes/*.
-
-To manually build pdf use `bin\build_pdf`. It fail is been used as commit hook
-with every commit to rebuild pdf file.
 
 ## Used versions
 
 I have tested this install with:
 
-* Ruby v2.4.1
-* Jekyll v3.8.4
-* wkhtmltopdf 0.12.5
+* MacOS 10.14
 * Docker version 18.06.1-ce, build e68fc7a
 * Chrome 69.0.3497.100 (for livereload feature)
 
-You do not need all this tools for up and running.
+## Further improvements
 
-Feel free pull-request your patches and fixes.
+* If the project will require some extra scripts in `bin` folder will be good
+to move all environment variables defaults to `.env.example`
+* Add auto-convertation to other formats, like `doc`, `docx`, etc.
 
 ## Copyright & License
 

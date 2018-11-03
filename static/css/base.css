@@ -116,8 +116,8 @@
 	ul.large li { line-height: 21px; }
 	li p { line-height: 21px; }
 	ul > li { margin-left: 1em;margin-top: 0.8em;margin-bottom: 0.8em; }
-	ul > li:before{ content: "\f00c";
-		font-family: FontAwesome;
+	ul > li:before{ content: "\f058";
+		font-family: "Font Awesome 5 Free";
 		font-style: normal;
 		font-weight: normal;
 		text-decoration: inherit;
