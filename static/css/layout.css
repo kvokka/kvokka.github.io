@@ -31,8 +31,7 @@ p, address {
 }
 
 .me {
-    width: 150px;
-    height: 150px;
+    width: 160px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -139,7 +138,7 @@ em {
 
     .unprinted {
         display: none;
-        
+
     }
 }
 
