@@ -116,16 +116,27 @@
 	ul.large li { line-height: 21px; }
 	li p { line-height: 21px; }
 	ul > li { margin-left: 1em;margin-top: 0.8em;margin-bottom: 0.8em; }
-	ul > li:before{ content: "\f058";
+	ul > li::before {
 		font-family: "Font Awesome 5 Free";
 		font-style: normal;
-		font-weight: normal;
+		font-weight:  300;
+   	    font-variant: normal;
 		text-decoration: inherit;
+		text-rendering: auto;
 		padding-right: 1em;
         top: 0.5em;
         left: 0;
+        content: "\f058";
+	}
+	ul > li.in_progress::before {
+		content: "\f141";
+		font-weight: 900;
 	}
 
+	ul > li.pending::before {
+		content: "\f111";
+		font-weight: 400;
+	}
 
 /* #Images
 ================================================== */
