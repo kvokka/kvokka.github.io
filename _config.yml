@@ -4,13 +4,14 @@ rdiscount:
   extensions: [smart]
 permalink: :title.html
 paginate: 5
-plugins: 
+plugins:
   - jekyll-paginate
 safe: true
 
 # edit this section with your information
 # jekyller.github.io - all contents run on /vitae/
 # for a normal use at the base of the server change it to "/"
+production_path: https://kvokka.github.io
 baseurl: /
 title: Mike Belyakov's Resume
 name: Mike Belyakov
@@ -28,6 +29,6 @@ address:
 google_analytics: UA-128594053-1
 
 # needed for travis-ci build
-exclude: 
+exclude:
   - vendor
   - bin

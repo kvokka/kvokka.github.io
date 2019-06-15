@@ -136,6 +136,10 @@ em {
     /*margin-right: 6px;*/
 }
 
+.printed_only {
+    display: none;
+}
+
 @media print {
     @page {
         margin: 15mm;
@@ -159,6 +163,10 @@ em {
     .unprinted {
         display: none;
 
+    }
+
+    .printed_only {
+        display: inline-block;
     }
 }
 
