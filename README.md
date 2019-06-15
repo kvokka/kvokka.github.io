@@ -11,7 +11,7 @@ This template contain scripts to auto re-generate `pdf` version of CV after each
 All variables are optional, and it will be convenient to store then in `.env` file, which is loaded by default by plenty about of shells (for example `zsh` use `dotenv` plugin for it).
 
 * `JEKYLL_PORT` is port on the host machine, default - `4000`
-* `PDF_PATH` if the path in the project where the compiled version of the `pdf` will be stored, default - `static/pdf/`
+* `GENERATED_PATH` if the path in the project where the compiled version of the `pdf` & `doc` will be stored, default - `static/generated`
 * `JEKYLL_VERSION`, default - 3.8
 * `JEKYLL_CONTAINER`, default - `jekyll/jekyll`
 * `BUNDLE_PATH` jekyll under the hood is using gems, like any other Ruby tool, so you may want to store it in the same place with your system gems to keep it DRY. But the path of your gem storage may vary from system to system, so you have to select it manually, ot it will be stored in the project folder (excluded from git). Get the actual paths of your gem storages you can with `gem environment`, default - `$PWD/vendor/bundle`
@@ -59,7 +59,6 @@ I have tested this install with:
 
 * If the project will require some extra scripts in `bin` folder will be good
 to move all environment variables defaults to `.env.example`
-* Add auto-convertation to other formats, like `doc`, `docx`, etc.
 
 ## Copyright & License
 

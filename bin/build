@@ -1,16 +1,21 @@
 #!/usr/bin/env bash
 
 JEKYLL_PORT=${JEKYLL_PORT:-4000}
-PDF_PATH=${PDF_PATH:-static/pdf/}
+GENERATED_PATH=${GENERATED_PATH:-$PWD/static/generated}
 JEKYLL_VERSION=${JEKYLL_VERSION:-3.8}
 BUNDLE_PATH=${BUNDLE_PATH:-$PWD/vendor/bundle}
 
-mkdir -p $PDF_PATH
+mkdir -p $GENERATED_PATH
 
 function create_pdf {
     docker run \
         surnet/alpine-wkhtmltopdf:3.7-0.12.5-small \
-        host.docker.internal:$JEKYLL_PORT --print-media-type - > $PDF_PATH/cv.pdf
+        host.docker.internal:$JEKYLL_PORT --print-media-type - > $GENERATED_PATH/cv.pdf
+}
+
+function create_doc {
+    docker run -v $GENERATED_PATH:/tmp portown/alpine-pandoc:2.0.2 \
+    pandoc -o /tmp/cv.docx -s http://host.docker.internal:$JEKYLL_PORT/doc
 }
 
 function wait_port() {
@@ -30,9 +35,11 @@ function wait_port() {
 
 if [[ -n $(lsof -i :$JEKYLL_PORT) ]];then
     create_pdf
+    create_doc
 else
     JEKYLL_CONTAINER_SHA=$(bin/jekylld s)
     wait_port $JEKYLL_PORT
     create_pdf
+    create_doc
     docker kill $JEKYLL_CONTAINER_SHA &>/dev/null
 fi

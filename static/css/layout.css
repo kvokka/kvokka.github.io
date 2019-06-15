@@ -9,6 +9,26 @@ body {
     border-bottom: 5px solid #27A822;
 }
 
+.container > .column > span {
+    display: block;
+    overflow: hidden;
+}
+
+.container > .column > span::after {
+    content:"";
+    display: inline-block;
+    height: 0.5em;
+    vertical-align: bottom;
+    width: 100%;
+    margin-right: -100%;
+    margin-left: 10px;
+}
+
+.container > .column > span > em {
+    display: none;
+}
+
+
 .container {
     margin-top: 50px;
 }

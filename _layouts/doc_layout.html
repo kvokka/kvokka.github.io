@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.name }}'s Résumé">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+<div class="container">
+    Phone: <a href="{{ site.tel_full }}">{{ site.tel }}</a>,
+    Address: <a href="{{ site.google_maps }}">
+            {{ site.address.city }},
+            {{ site.address.country }}
+        </a>
+    Email: <a href="{{ site.email_full }}">{{ site.email }}</a><br>
+
+        <a href="https://github.com/{{ site.github }}">github.com/{{ site.github }}</a>,
+        <a href="http://git-awards.com/users/search?login={{ site.github }}">GitAwards</a>,
+        <a href="https://profile.codersrank.io/user/{{ site.github }}">CodersRank</a><br>
+
+    {{ content }}
+</div>
+
+</body>
+</html>
