@@ -57,6 +57,7 @@ I have tested this install with:
 
 ## Further improvements
 
+* Move `pdf` & `docx` versions compilation to CI pipeline as artifacts
 * If the project will require some extra scripts in `bin` folder will be good
 to move all environment variables defaults to `.env.example`
 
