@@ -23,18 +23,3 @@ PreCommit:
     exclude:
       - '**/*.pdf'
       - '**/*.jpg'
-  CustomScript:
-    enabled: true
-    required_executable: './bin/pre_commit_hook'
-
-#PostCheckout:
-#  ALL: # Special hook name that customizes all hooks of this type
-#    quiet: true # Change all post-checkout hooks to only display output on failure
-#
-#  IndexTags:
-#    enabled: true # Generate a tags file with `ctags` each time HEAD changes
-
-PostCommit:
-  CustomScript:
-    enabled: true
-    required_executable: './bin/post_commit_hook'

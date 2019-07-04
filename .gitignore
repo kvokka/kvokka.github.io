@@ -14,5 +14,5 @@ vendor/*
 
 # others
 *.swp
-.commit
 .env
+assets/*

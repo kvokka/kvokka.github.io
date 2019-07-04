@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+GENERATED_PATH=${GENERATED_PATH:-$PWD/assets}
+
+mkdir -p $GENERATED_PATH
+
+docker run \
+     -v $PWD/_site:/site -v $PWD/static:/static  \
+      surnet/alpine-wkhtmltopdf:3.7-0.12.5-small \
+     /site/index.html --print-media-type - > $GENERATED_PATH/cv.pdf
+
+docker run \
+     -v $PWD/_site:/tmp/site -v $GENERATED_PATH:/tmp/static \
+     portown/alpine-pandoc:2.0.2 \
+     pandoc -o /tmp/static/cv.docx -s /tmp/site/doc.html
