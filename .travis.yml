@@ -10,9 +10,7 @@ services:
 
 script:
 - jekyll build
-# - echo $GENERATED_PATH
 - bin/build_assets
-# - jekyll build
 
 deploy:
   provider: pages
