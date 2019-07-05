@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-GENERATED_PATH=${GENERATED_PATH:-$PWD/static/generated}
+GENERATED_PATH=${GENERATED_PATH:-$PWD/assets}
 
 mkdir -p $GENERATED_PATH
 
