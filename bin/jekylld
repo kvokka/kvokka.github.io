@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+JEKYLL_PORT=${JEKYLL_PORT:-4000}
+JEKYLL_IMAGE=${JEKYLL_IMAGE:-jekyll/jekyll}
+JEKYLL_VERSION=3.8
+BUNDLE_PATH=${BUNDLE_PATH:-$PWD/vendor/bundle}
+
+docker run \
+    --rm \
+    -p $JEKYLL_PORT:4000 \
+    --volume="$PWD:/srv/jekyll" \
+    --volume="$BUNDLE_PATH:/usr/local/bundle" \
+    -dit $JEKYLL_IMAGE:$JEKYLL_VERSION \
+    jekyll $@
