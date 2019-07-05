@@ -4,7 +4,7 @@
 
 Jekyll based template, fully dockerized, based on Markdown & Liquid and deployed to GitHub Pages.
 
-This template contain scripts to auto re-generate `pdf` version of CV after each commit.
+This template contain scripts to auto re-generate `pdf` & `docx` versions of CV after each commit by Travis CI.
 
 ## How to use it locally
 
@@ -20,7 +20,7 @@ All variables are optional, and it will be convenient to store then in `.env` fi
 
 ### Tools
 
-* `bin/build_assets` build pdf & docx. Will use existed jekyll build.
+* `bin/build_assets` build pdf & docx. Will use existed `_site` folder. Result can be found in `assets` folder.
 * `bin/jekyll` for usage jekyll as a service.
 * `bin/jekylld` for usage jekyll as a daemon.
 * `bin/stop_all` stop all jekyll running containers.
@@ -38,7 +38,6 @@ The template contain pdf file, which is re-generated automatically after each co
 ```
 $ bundle install
 $ overcommit --install
-$ overcommit --sign
 ```
 
 If at the moment when the commit begin's you already have
@@ -55,12 +54,6 @@ I have tested this install with:
 * MacOS 10.14
 * Docker version 18.06.1-ce, build e68fc7a
 * Chrome 69.0.3497.100 (for livereload feature)
-
-## Further improvements
-
-* Move `pdf` & `docx` versions compilation to CI pipeline as artifacts
-* If the project will require some extra scripts in `bin` folder will be good
-to move all environment variables defaults to `.env.example`
 
 ## Copyright & License
 
