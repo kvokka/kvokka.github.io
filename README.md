@@ -1,7 +1,5 @@
 # My CV
 
-[![Build Status          ][travisci_badge]][travisci]
-
 Jekyll based template, fully dockerized, based on Markdown & Liquid and deployed to GitHub Pages.
 
 This template contain scripts to auto re-generate `pdf` & `docx` versions of CV after each commit by Travis CI.
@@ -28,7 +26,7 @@ All variables are optional, and it will be convenient to store then in `.env` fi
 ### Run
 
 ```
-$ bin/jekyll serve --livereload
+bin/jekyll serve --livereload
 ```
 
 ### Edit
@@ -36,8 +34,8 @@ $ bin/jekyll serve --livereload
 The template contain pdf file, which is re-generated automatically after each commit, but for using this magic you will need:
 
 ```
-$ bundle install
-$ overcommit --install
+bundle install
+overcommit --install
 ```
 
 If at the moment when the commit begin's you already have
@@ -46,6 +44,12 @@ otherwise the `bin/jekyll server` will be up and down only for
 the commit (but it is quick)
 
 Edit the site attributes in *_config.yml* and edit the various entries in *_includes/*.
+
+and to re-generate the assets run
+
+```bash
+bin/build_assets
+```
 
 ## Used versions
 
