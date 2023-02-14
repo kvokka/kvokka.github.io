@@ -27,6 +27,7 @@ address:
   city: Braga
   country: Portugal
 google_analytics: UA-128594053-1
+shared_docs: https://cloud.mail.ru/public/PhfY/2VywZL9yA
 
 # needed for travis-ci build
 exclude:
