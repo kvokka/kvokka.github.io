@@ -3,11 +3,13 @@
 JEKYLL_PORT=${JEKYLL_PORT:-4000}
 JEKYLL_IMAGE=${JEKYLL_IMAGE:-jekyll/jekyll}
 JEKYLL_VERSION=4.2.2
+BUNDLE_PATH=${LOCAL_BUNDLE_PATH:-$PWD/vendor/bundle}
 
 docker run \
     --rm \
     --platform=linux/amd64 \
     -p $JEKYLL_PORT:4000 \
+    --volume="$BUNDLE_PATH:/usr/local/bundle" \
     --volume="$PWD:/srv/jekyll" \
     -it $JEKYLL_IMAGE:$JEKYLL_VERSION \
     jekyll $@
