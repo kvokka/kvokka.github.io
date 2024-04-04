@@ -9,13 +9,13 @@ body {
     border-bottom: 5px solid #27A822;
 }
 
-.container > .column > span {
+.container>.column>span {
     display: block;
     overflow: hidden;
 }
 
-.container > .column > span::after {
-    content:"";
+.container>.column>span::after {
+    content: "";
     display: inline-block;
     height: 0.5em;
     vertical-align: bottom;
@@ -24,7 +24,7 @@ body {
     margin-left: 10px;
 }
 
-.container > .column > span > em {
+.container>.column>span>em {
     display: none;
 }
 
@@ -42,11 +42,13 @@ a:visited {
     text-decoration: none;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
     color: #27A822;
 }
 
-p, address {
+p,
+address {
     margin-bottom: 0;
 }
 
@@ -58,21 +60,23 @@ p, address {
     margin-bottom: 20px;
 }
 
-header > h1, section > h1 {
+header>h1,
+section>h1 {
     color: #27A822;
 }
 
-header > h1 {
+header>h1 {
     line-height: 100%;
     font-size: 250%;
     margin-bottom: 20px;
 }
 
-.container > header p, .container > header address {
+.container>header p,
+.container>header address {
     margin-bottom: 20px;
 }
 
-.container > header p:last-child {
+.container>header p:last-child {
     margin-bottom: 20px;
 }
 
@@ -80,7 +84,7 @@ section {
     margin-bottom: 20px;
 }
 
-section > h1 {
+section>h1 {
     font-size: 140%;
     line-height: 120%;
     text-transform: uppercase;
@@ -90,7 +94,7 @@ article {
     margin-bottom: 20px;
 }
 
-article > header > h1 {
+article>header>h1 {
     font-size: 112%;
     font-weight: bold;
     line-height: 150%;
@@ -98,33 +102,33 @@ article > header > h1 {
     color: inherit;
 }
 
-article > header > span + span {
+article>header>span+span {
     margin-left: 2px;
 }
 
-article > header > span + span::before {
+article>header>span+span::before {
     content: '@';
     margin-right: 4px;
 }
 
-article > header > span {
+article>header>span {
     color: #808080;
     font-size: 100%;
 }
 
-article > header > span a {
+article>header>span a {
     color: inherit;
 }
 
-article > header address {
+article>header address {
     display: inline;
 }
 
-article > header address + time {
+article>header address+time {
     margin-left: 6px;
 }
 
-article > header address + time::before {
+article>header address+time::before {
     content: '—';
     margin-right: 6px;
 }
@@ -150,12 +154,12 @@ em {
         line-height: 24pt;
     }
 
-    .container > header {
+    .container>header {
         font-size: 80%;
         line-height: 160%;
     }
 
-    article > header > span {
+    article>header>span {
         font-size: 80%;
         line-height: 80%;
     }
@@ -173,4 +177,9 @@ em {
 footer p {
     margin-bottom: 10px;
     font-size: 10pt;
+}
+
+p .ai-hack {
+    font-size: 1pt;
+    color: rgb(255, 255, 255);
 }
