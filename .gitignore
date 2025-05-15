@@ -12,3 +12,6 @@ Gemfile.lock
 *.log
 
 tmp/
+
+app/cache/
+app/tasks/

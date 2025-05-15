@@ -1,17 +1,68 @@
-- title: Student, Harvard CS
-  from: 2014
-  to: 2018
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-- title: Software Engineer, Google, UK
-  from: 2018
+- title: Senior Site Reliability Engineer, UK, Jersey (Remote)
+  from: July 2019
   to: present
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  description: |
+    Working mostly on GCP cloud with k8s (GKE) on a high-load site with company and external services.
+    Key responsibilities included: maintaining infrastructure as code, migrating CI/CD,
+    rebuilding EFK cluster, Elixir/Ruby/Go/JS projects support, code optimisation, and MySQL cluster upgrades and management.
+
+
+- title: Software Architect, USA, IL (Remote)
+  from: September 2018
+  to: February 2019
+  description: |
+    Contributed to a microservice-based distributed architecture using Docker/Containers, GKE, and minikube,
+    with Ruby (Ruby on Rails) as the main language and Python as the secondary.
+    Architected and developed a new company project from scratch and lead hiring interviewing dozens of candidates.
+
+- title: Senior Software Engineer, Braga, Portugal
+  from: May 2018
+  to: September 2018
+  description: |
+    Worked on a microservice for Crypto exchange with primarily using JavaScript (NodeJS), rewrote AWS Drone CI/CD scripts (Docker/Container based).
+    Refactored codebase removing about 10% of codebase, extracted code to brand new services
+    for reusability, reduced bugs and improved documentation, implemented architectural improvements, and reworked CI scripts
+
+- title: Senior Software Engineer, Melbourne, Australia (Remote)
+  from: April 2017
+  to: April 2018
+  description: |
+    Worked on a monolith architecture (TDD with Minitest, BDD with Capybara) with custom deploy scripts to bare servers
+    (Jenkins CI, Dockerized development process), main language Ruby (Ruby on Rails).
+    Key tasks: migrated a large Rails 3.x codebase to Rails 5, removed more than 10 vulnerabilities (CSRF, SQL injection, etc.),
+    reduced memory load by 15% and CPU consumption, updated and fixed existing software, collaborated on system analysis,
+    introduced hacks reducing test pass time by 50%, fixed many unstable tests in a 20k+ test suite, improved CI,
+    and moved the development process to Docker.
+
+- title: Senior Software Engineer, Valencia, Spain (Remote)
+  from: June 2016
+  to: September 2017
+  description: |
+    Supported a microservice-based distributed architecture (3 services for video-streaming orchestration),
+    using TDD with Rspec, deployed to own servers with Capistrano then with GitLab CI/CD (Docker/Container based) on Rancher.
+    Main language was Ruby (Ruby on Rails).
+    Supported internal micro-services, automated company code style guide, added CI/CD with Gitlab, moved development cycle to Docker
+    with Rancher integration, significantly improved test coverage, developed and supported internal CLI tools for Bash and ZSH,
+    created and extended new CLI tools for SSH usage, added Chef recipes, and introduced chef roles testing with a remote environment over VPN.
+
+- title: Senior Software Engineer, Ijevsk, Russia (Remote)
+  from: September 2015
+  to: September 2016
+  description: |
+    Worked on a monolith architecture (TDD with Rspec, BDD with Capybara) with Capistrano deploy scripts to PaaS (Heroku/Locum).
+    Main language was Ruby (Sinatra/Ruby on Rails framework).
+    Managed full project lifecycle from idea to deployment, created a CRM system from scratch with about 100 models and code quality
+    of more than 97 by RubyCritic, consulted regularly with customers on project status, proposals, and technical issues,
+    and collaborated with team members on application system analysis.
+
+- title: Early Career & Progression (1999 - Aug 2015)
+  from: 1999
+  to: August 2015
+  description: |
+    Commenced career as a Junior Engineer in 1999, advancing through roles such as System Administrator, Delphi Developer,
+    and 1C Developer/System Architect, culminating in a System Architect & CTO position by 2007, and later working as a Software Engineer
+    until August 2015. This foundational period involved hands-on experience in network architecture and administration,
+    diverse software development (Delphi, 1C7, 1C8, SQL, PHP, Ruby, etc.), system architecture design, leading a teams of engineers,
+    comprehensive process automation, and robust infrastructure management. Also completed a Bachelor's Degree in Computer Science (2000-2006)
+    and contributed to volunteer IT support for community projects during these years (including "Encyclopedia of Pskov" 2004-2008
+    and "Teatre of a word" 2007-2011).

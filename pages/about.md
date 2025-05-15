@@ -8,7 +8,7 @@ weight: 3
 # **About Me**
 
 Hi I am **{{ site.author.name }}** :wave:,<br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Leveraging over 20 years of expertise in IT infrastructure and back-end engineering, I'm now channeling my passion for cutting-edge technology towards the AI revolution. As a certified Google Cloud Architect and Kubernetes aficionado, I build robust, scalable systems ready for the demands of intelligent applications. While I'm a versatile polyglot programmer with deep experience in languages like Go and JS, my primary focus and excitement are now centered on fully immersing myself in AI development and exploring its transformative potential. I'm a highly motivated, results-driven innovator, eager to apply my problem-solving skills to build next-generation AI solutions.
 
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}

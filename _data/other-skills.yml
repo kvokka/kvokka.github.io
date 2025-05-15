@@ -1,7 +1,35 @@
-- name: Adobe Photoshop
-  percentage: 95
-  color: info
+# _data/other-skills.yml
+# Updated to include 10 most valuable skills in the specified format.
 
-- name: Adobe Illustrator
+# Existing skills
+- name: Kubernetes
+  percentage: 95
+  color: primary
+
+- name: GKE (Google Cloud)
   percentage: 90
   color: success
+
+- name: Docker
+  percentage: 90
+  color: info
+
+- name: MySQL
+  percentage: 90
+  color: info
+
+- name: Git
+  percentage: 95
+  color: dark
+
+- name: Bash
+  percentage: 85
+  color: danger
+
+- name: Terraform
+  percentage: 80
+  color: primary
+
+- name: AWS
+  percentage: 85
+  color: info

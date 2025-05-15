@@ -1,11 +1,40 @@
-- name: HTML5/CSS3
+# _data/programming-skills.yml
+# Updated with data from tmp/old/_includes/skills.html
+
+# Existing skills (kept as is, or you can instruct to modify/remove)
+
+- name: Ruby
   percentage: 90
   color: danger
 
-- name: Go
-  percentage: 80
-  color:
+- name: Bash
+  percentage: 90 # Assuming 4.5 stars is 90%
+  color: info # Example color, can be adjusted
+
+- name: JavaScript
+  percentage: 80 # Assuming 4 stars is 80%
+  color: warning # Example color, can be adjusted
 
 - name: Python
-  percentage: 70
+  percentage: 80
   color: secondary
+
+- name: Go
+  percentage: 70
+  color:
+
+- name: HTML5/CSS3
+  percentage: 60
+  color: primary
+
+- name: PHP
+  percentage: 30 # Assuming 3 stars is 60%
+  color: success # Example color, can be adjusted
+
+- name: 1C
+  percentage: 30 # Assuming 3 stars is 60%
+  color: warning # Example color, can be adjusted
+
+- name: Delphi, Pascal, C#, Assembler, etc...
+  percentage: 20
+  color: secondary # Example color, can be adjusted
