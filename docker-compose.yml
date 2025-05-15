@@ -1,0 +1,18 @@
+services:
+  jekyll:
+    env_file:
+      - path: ~/.devcontainer/.env.devcontainer
+        required: false
+      - path: .env
+        required: false
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - .:/workspace:cached
+      - ~/.devcontainer:/home/vscode/.devcontainer:cached
+    command: "jekyll serve --host 0.0.0.0 --livereload"
+    ports:
+      - "4000:4000"
+    user: vscode # connected with remoteUser in devcontainer.json
+    working_dir: /workspace

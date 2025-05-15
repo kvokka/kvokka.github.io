@@ -1,0 +1,73 @@
+{
+  "mcpServers": {
+    "sequentialthinking": {
+      "timeout": 60,
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "alwaysAllow": [],
+      "disabled": false
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "${env:BRAVE_API_KEY}"
+      },
+      "alwaysAllow": [
+        "brave_web_search"
+      ]
+    },
+    "browsermcp": {
+      "command": "npx",
+      "args": [
+        "@browsermcp/mcp@latest"
+      ],
+      "disabled": true,
+      "alwaysAllow": []
+    },
+    "git-mcp": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://gitmcp.io/docs"
+      ]
+    },
+    "time": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "mcp/time"
+      ]
+    },
+    "context7": {
+      "timeout": 60,
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ]
+    }
+  }
+}

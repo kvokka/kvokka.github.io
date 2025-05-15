@@ -1,0 +1,62 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/go
+{
+	"name": "App",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "jekyll", // Must match with docker-compose.yml service name
+	"workspaceFolder": "/workspace",
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"dev.containers.copyGitConfig": true,
+				"roo-cline.customStoragePath": "/workspace/app/",
+				"editor.tabSize": 2,
+				"cSpell.words": [
+					"aicommit",
+					"guiyomh",
+					"gvatsal",
+					"jsburckhardt",
+					"chezmoi",
+					"modelcontextprotocol",
+					"sequentialthinking",
+					"Nuxt",
+					"envmcp",
+					"bierner",
+					"nefrob"
+				]
+			},
+			"extensions": [
+				"streetsidesoftware.code-spell-checker",
+				"ms-azuretools.vscode-docker",
+				"nefrob.vscode-just-syntax",
+				"redhat.vscode-yaml",
+				"GitHub.codespaces",
+				"DavidAnson.vscode-markdownlint",
+				"RooVeterinaryInc.roo-cline",
+				"Nuxt.mdc",
+				"shd101wyy.markdown-preview-enhanced",
+				"github.vscode-github-actions",
+				"bierner.markdown-mermaid"
+			]
+		}
+	},
+	"portsAttributes": {
+		"4000": {
+			"label": "jekyll",
+			"onAutoForward": "notify"
+		}
+	},
+	"containerEnv": {
+		"SHELL": "/usr/bin/zsh",
+		"CODESPACES": "true"
+	},
+	"remoteEnv": {
+		"HOST_PROJECT_PATH": "${localWorkspaceFolder}"
+	}
+}

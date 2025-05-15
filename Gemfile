@@ -1,5 +1,4 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'jekyll', '~>4.2'
-gem 'overcommit', '~>0.48'
-gem 'webrick'
+gem "github-pages", group: :jekyll_plugins
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?

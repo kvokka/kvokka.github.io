@@ -1,35 +1,109 @@
-highlighter: rouge
-markdown: kramdown
-rdiscount:
-  extensions: [smart]
-permalink: :title.html
-paginate: 5
+### Site Settings ###
+title               : Kvokka's blog
+description         : >-
+                      AI, LLM's, Clouds and how all it mixes.
+baseurl             : "/"            # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+repository          : kvokka/kvokka.github.io      # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
+remote_theme        : yousinix/portfolYOU
+open_new_tab        : false                    # Opens external URLs in new tab (works for posts, projects and navbar only)
+
+
+### Plugins ###
 plugins:
-  - jekyll-paginate
-safe: true
+  - jemoji
 
-# edit this section with your information
-# jekyller.github.io - all contents run on /vitae/
-# for a normal use at the base of the server change it to "/"
-production_path: https://kvokka.github.io
-baseurl: /
-title: Mike Belyakov's Resume
-name: Mike Belyakov
-email: kvokka@yahoo.com
-email_full: mailto:kvokka@yahoo.com
-github: kvokka
-twitter: i_do_not_have_it
-tel: +351 91 3079915
-tel_full: tel:+351913079915
-google_maps: 'https://goo.gl/maps/Uob4KxzvWeE2'
-address:
-  postcode: 4715 213
-  city: Braga
-  country: Portugal
-google_analytics: UA-128594053-1
-shared_docs: https://cloud.mail.ru/public/GajC/cqwfnehS1
 
-# needed for travis-ci build
+### Navbar Settings ###
+nav_exclude:                                            # The following paths are excluded from navbar
+  - pages/tags.html
+  - pages/404.html
+  - pages/index.md
+  - documentation/partials/**                           # For Documentation Only
+
+
+### Author Info ###
+author:
+  name              : Mike Belyakov
+  image             : https://media.licdn.com/dms/image/v2/D5603AQHBEWo2MLRwYA/profile-displayphoto-shrink_800_800/B56ZOAdGDcGsAc-/0/1733026931402?e=1752710400&v=beta&t=-KCVLwHLM7UDHH61GKK6wOgX7egnPCQo-8G4QPDhfqA
+# behance           : your_username
+# dribbble          : your_username
+  email             : kvokka@yahoo.com
+# facebook          : your_username
+  github            : kvokka
+# gitlab            : your_username
+  instagram         : kvokvakvo
+# kaggle            : your_username
+  linkedin          : kvokka
+# medium            : your_username
+# soundcloud        : your_username
+# spotify           : your_username
+# stackoverflow     : your_user_id
+# tumblr            : your_username.tumblr.com
+# twitch            : your_username
+# twitter           : i_do_not_have_it
+# vimeo             : your_username
+# youtube           : your_channel_name
+# keybase           : your_username
+
+
+### Posts ###
+permalink: /blog/:title
+
+
+### Collections ###
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
+  elements:                                             # For Documentation Only
+    output: true                                        # For Documentation Only
+
+
+### Disqus ###
+disqus:
+  shortname: your-short-name-disqus                     # Your website Shortname on disqus
+
+
+### Analytics ###
+analytics:
+  enabled: true                                        # Set true to enable analytics
+  google:
+    tracking_id: UA-128594053-1
+
+
+### Buy me a coffee ###
+# See https://www.buymeacoffee.com/
+buymeacoffee:
+  enabled: false
+  username: kvokka
+  color: "#007bff"
+  message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
+  description: "Support me on Buy me a coffee!"
+
+
+### Defaults for collections ###
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "page"
+  - scope:                                              # For Documentation Only
+      path: ""                                          # For Documentation Only
+      type: "elements"                                  # For Documentation Only
+    values:                                             # For Documentation Only
+      layout: "element"                                 # For Documentation Only
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: false                                   # Set to true to enable disqus comments
+
+
+### Exclude from processing ###
 exclude:
-  - vendor
-  - bin
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - "*.log"
+  - tmp
