@@ -10,6 +10,11 @@ comments: true
 
 So, I was poking around on GitHub and found this cool project called [SWE-agent](https://github.com/SWE-agent/SWE-agent). At first, I was like, “Neat, it fixes GitHub issues on its own!” Then it hit me—this is the same agent killing it on [SWE-bench](https://www.swebench.com/), a benchmark that throws real-world coding problems at AI. With a 12.5% solve rate, SWE-agent’s doing better than a lot of fancier tools out there, and it’s keeping things super simple. Less is more, right?
 
+UPD: And now everything lights up - OpenAI [updated](https://www.youtube.com/watch?v=hhdpnbfH6NU) [Codex](https://openai.com/index/introducing-codex/), which
+is the ancestor of the SWE-agent, and it’s now available for free. Ofc it'll
+bind you to the OpenAI API, but it’s still a great opportunity to try it out.
+XMas in May, right?
+
 ## What’s SWE-agent All About?
 
 SWE-agent is this open-source tool that lets language models tackle coding tasks like a pro. It’s got this thing called an **Agent-Computer Interface (ACI)** that helps the AI zip through repos, tweak code, and run tests without breaking a sweat. Unlike beefy tools like Replit’s Roo or GitHub’s Copilot, SWE-agent’s vibe is minimal—basic commands, no fluff. Even its system prompt is short and sweet, which is wild for something this powerful.
