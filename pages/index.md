@@ -1,6 +1,4 @@
 ---
-layout: default
+layout: resume
 permalink: /
 ---
-
-{% include landing.html %}

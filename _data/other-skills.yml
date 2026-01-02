@@ -1,35 +1,31 @@
-# _data/other-skills.yml
-# Updated to include 10 most valuable skills in the specified format.
+- name: RAG (Retrieval-Augmented Generation)
+  percentage: 85
+  color: warning
 
-# Existing skills
+- name: GCP (Google Cloud Platform)
+  percentage: 95
+  color: primary
+
 - name: Kubernetes
   percentage: 95
-  color: primary
-
-- name: GKE (Google Cloud)
-  percentage: 90
-  color: success
-
-- name: Docker
-  percentage: 90
   color: info
-
-- name: MySQL
-  percentage: 90
-  color: info
-
-- name: Git
-  percentage: 95
-  color: dark
-
-- name: Bash
-  percentage: 85
-  color: danger
 
 - name: Terraform
-  percentage: 80
-  color: primary
+  percentage: 90
+  color: warning
 
-- name: AWS
-  percentage: 85
+- name: Docker
+  percentage: 95
   color: info
+
+- name: CI/CD (GitHub Actions, GitLab CI)
+  percentage: 90
+  color: danger
+
+- name: Prometheus / Grafana / Datadog
+  percentage: 85
+  color: warning
+
+- name: GitOps (ArgoCD)
+  percentage: 85
+  color: success

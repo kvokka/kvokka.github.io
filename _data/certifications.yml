@@ -1,0 +1,15 @@
+- name: Cloud Architecture with GCP Specialization
+  issuer: Google Cloud
+  date: 2024
+  url: assets/gcp.pdf
+
+- name: Certified Kubernetes Application Developer (CKAD)
+  issuer: CNCF
+  url: assets/ckad.pdf
+
+- name: Architecting with Google Compute Engine Specialization
+  issuer: Google Cloud
+
+- name: DevOpsCon London 2024 (Publication/Speaker)
+  issuer: DevOpsCon
+  url: https://devopscon.io/cloud-platforms-serverless/experiences-database-migration-postgresql-dbaas/

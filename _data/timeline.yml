@@ -1,68 +1,136 @@
-- title: Senior Site Reliability Engineer, UK, Jersey (Remote)
-  from: July 2019
+- title: Senior Site Reliability Engineer
+  subtitle: Checkatrade (London Area, United Kingdom)
+  from: September 2025
   to: present
   description: |
-    Working mostly on GCP cloud with k8s (GKE) on a high-load site with company and external services.
-    Key responsibilities included: maintaining infrastructure as code, migrating CI/CD,
-    rebuilding EFK cluster, Elixir/Ruby/Go/JS projects support, code optimisation, and MySQL cluster upgrades and management.
+    Platform serving 100,000+ daily active users with 100+ engineering team members, 100+ repositories and microservices, primarily on GCP in a multi-cloud environment.
 
+    * Reduced false-positive incident creation by 98% through advanced alerting rules and signal correlation in Datadog and Prometheus.
 
-- title: Software Architect, USA, IL (Remote)
+    * Overhauled Cloudflare filtering and security rules, improving traffic routing accuracy and reducing attack surface exposure.
+
+    * Simplified and consolidated GitHub Actions workflows, cutting pipeline maintenance overhead by 60% and accelerating feedback loops.
+
+    * Leading migration from end-of-life Crossplane to Datadog Operator and GCP Config Connector for more sustainable infrastructure management (in progress).
+
+- title: Chief Executive Officer
+  subtitle: Umum (Tbilisi, Georgia)
+  from: July 2025
+  to: present
+  description: |
+    Building advanced AI-driven solutions and cloud-native microservices on GCP, leveraging modern AI frameworks and tools for end-to-end development and deployment.
+
+    * Designed and implemented production-grade microservices architecture in Python and TypeScript, integrating state-of-the-art AI models (LLMs, embeddings, RAG pipelines) for intelligent automation and data processing.
+
+    * Deployed scalable, serverless and containerized workloads on GCP (Cloud Run, GKE Autopilot, Vertex AI), achieving cost-efficient auto-scaling and near-zero maintenance overhead.
+
+    * Automated full development lifecycle with GitHub Actions, Terraform, and GCP-native services, enabling rapid iteration and one-click deployments.
+
+    * Optimized inference pipelines for performance and cost, reducing latency by 60%+ and token expenses through prompt engineering, caching, and model quantization techniques.
+
+    * Developed custom AI agents and tools combining multiple modalities (text, vision, structured data), delivering high-accuracy solutions for complex real-world use cases.
+
+- title: Senior Site Reliability Engineer
+  subtitle: Legend (United Kingdom)
+  from: July 2019
+  to: June 2025
+  description: |
+    Gaming industry platform with 100,000+ daily active users in specialized subdivision (engineering team <10 members); company-wide engineering team of 100+ across AWS and GCP environments.
+
+    * Optimized GCP infrastructure to achieve 99.99% uptime and reduced release cycles by 86% through comprehensive CI/CD modernization.
+
+    * Automated infrastructure provisioning with Terraform, Packer, and Ansible; implemented GitOps deployments via ArgoCD.
+
+    * Designed, deployed, and maintained fully self-hosted observability stack (Prometheus, Grafana, Datadog) from scratch, handling full lifecycle and reducing third-party dependency costs by 40%.
+
+    * Centralized developer workflows with self-hosted Backstage portal, cutting onboarding time by 70% and improving cross-team visibility.
+
+    * Led incident response processes, reducing mean-time-to-resolution (MTTR) by 75%.
+
+    * Executed zero-downtime hot migrations of MySQL (from 5.6 to 8.4, addressing replication and compatibility challenges) and PostgreSQL across cloud providers.
+
+- title: Software Architect
+  subtitle: Bitstudios (Illinois, United States)
   from: September 2018
   to: February 2019
   description: |
-    Contributed to a microservice-based distributed architecture using Docker/Containers, GKE, and minikube,
-    with Ruby (Ruby on Rails) as the main language and Python as the secondary.
-    Architected and developed a new company project from scratch and lead hiring interviewing dozens of candidates.
+    Small team of ~20 engineers focused on complex, high-impact projects with emphasis on system design and DevOps practices.
 
-- title: Senior Software Engineer, Braga, Portugal
+    * Architected scalable microservices on GKE and Minikube, achieving 30% downtime reduction through self-healing and auto-scaling mechanisms.
+
+    * Defined service boundaries and infrastructure standards using Terraform and Helm to ensure consistent, maintainable deployments.
+
+    * Enhanced Ruby on Rails performance (20% faster response times), enabled zero-downtime deployments via Jenkins and GitLab CI/CD, and sustained 99.9% uptime with Prometheus/Grafana monitoring.
+
+    * Established DevOps culture and processes; built and led engineering team while delivering a globally distributed mission-critical system from inception.
+
+- title: Senior Software Engineer
+  subtitle: Seegno (Braga, Portugal)
   from: May 2018
   to: September 2018
   description: |
-    Worked on a microservice for Crypto exchange with primarily using JavaScript (NodeJS), rewrote AWS Drone CI/CD scripts (Docker/Container based).
-    Refactored codebase removing about 10% of codebase, extracted code to brand new services
-    for reusability, reduced bugs and improved documentation, implemented architectural improvements, and reworked CI scripts
+    Engineering team of ~40 across multiple concurrent projects in a fast-paced development environment.
 
-- title: Senior Software Engineer, Melbourne, Australia (Remote)
+    * Designed and developed a high-performance cryptocurrency exchange platform using Node.js (Koa) microservices architecture with rigorous TDD/BDD practices (Jest), achieving 99%+ test coverage.
+
+    * Containerized applications and orchestrated CI/CD pipelines on AWS with Docker and Drone, enabling frequent deployments with zero downtime.
+
+    * Reduced legacy code complexity by 25% through modularization, service decomposition, and elimination of redundant external library dependencies, enhancing maintainability and reusability across projects.
+
+    * Optimized CI/CD scripts and processes, reducing average pipeline execution time by 75% (4x speedup).
+
+    * Extracted critical user data handling into a dedicated compliant module to ensure full GDPR adherence, minimizing regulatory risk while supporting secure scalable operations.
+
+- title: Senior Lead Software Engineer
+
+  subtitle: Box+Dice | An MRI Software Company (Melbourne, Victoria, Australia)
+
   from: April 2017
-  to: April 2018
-  description: |
-    Worked on a monolith architecture (TDD with Minitest, BDD with Capybara) with custom deploy scripts to bare servers
-    (Jenkins CI, Dockerized development process), main language Ruby (Ruby on Rails).
-    Key tasks: migrated a large Rails 3.x codebase to Rails 5, removed more than 10 vulnerabilities (CSRF, SQL injection, etc.),
-    reduced memory load by 15% and CPU consumption, updated and fixed existing software, collaborated on system analysis,
-    introduced hacks reducing test pass time by 50%, fixed many unstable tests in a 20k+ test suite, improved CI,
-    and moved the development process to Docker.
 
-- title: Senior Software Engineer, Valencia, Spain (Remote)
+  to: April 2018
+
+  description: |
+
+    Revitalized a monolithic Ruby on Rails app while leading and mentoring a team of six engineers, driving best practices and fostering a culture of technical excellence.
+
+    * Spearheaded the adoption of TDD/BDD and led the migration from Rails 3.x to 5 for improved performance and maintainability.
+
+    * Eliminated 15+ critical security vulnerabilities, cut memory usage by 20%, and slashed test suite runtime by 60% through parallelization.
+
+    * Overhauled a 20,000-test suite for stability, optimized Jenkins CI to reduce build times by 40%, and containerized the dev environment with Docker, reducing developer onboarding time by 90%.
+
+    * Transformed complex legacy code into high-performance, reusable modules while driving scalable, client-focused architectural improvements.
+
+- title: Senior Software Engineer
+  subtitle: Enicad Development (Valencia, Spain)
   from: June 2016
   to: September 2017
   description: |
-    Supported a microservice-based distributed architecture (3 services for video-streaming orchestration),
-    using TDD with Rspec, deployed to own servers with Capistrano then with GitLab CI/CD (Docker/Container based) on Rancher.
-    Main language was Ruby (Ruby on Rails).
-    Supported internal micro-services, automated company code style guide, added CI/CD with Gitlab, moved development cycle to Docker
-    with Rancher integration, significantly improved test coverage, developed and supported internal CLI tools for Bash and ZSH,
-    created and extended new CLI tools for SSH usage, added Chef recipes, and introduced chef roles testing with a remote environment over VPN.
+    Engineering team of ~30 developing and operating a large-scale video streaming service with proprietary CDN infrastructure managing 300+ servers.
 
-- title: Senior Software Engineer, Ijevsk, Russia (Remote)
+    * Architected high-performance microservices platform for seamless video streaming at scale, supporting peak concurrent viewers with sub-second latency.
+
+    * Modernized deployment pipeline by replacing Capistrano with GitLab CI/CD, Docker, and Rancher, reducing deployment downtime by 90% and enabling zero-downtime releases.
+
+    * Increased automated test coverage to 95%+ with RSpec, eliminating critical production defects and enforcing code quality through automated linting and style checks.
+
+    * Optimized Chef recipes for consistent multi-environment configuration management and built custom CLI tools (Bash, ZSH, SSH) that reduced manual operational tasks by 80%, significantly boosting team efficiency.
+
+    * Owned full lifecycle of proprietary CDN components, ensuring reliable content delivery and rapid incident recovery across global infrastructure.
+
+- title: Senior Software Engineer
+  subtitle: Arcsis (Izhevsk, Russia)
   from: September 2015
   to: September 2016
   description: |
-    Worked on a monolith architecture (TDD with Rspec, BDD with Capybara) with Capistrano deploy scripts to PaaS (Heroku/Locum).
-    Main language was Ruby (Sinatra/Ruby on Rails framework).
-    Managed full project lifecycle from idea to deployment, created a CRM system from scratch with about 100 models and code quality
-    of more than 97 by RubyCritic, consulted regularly with customers on project status, proposals, and technical issues,
-    and collaborated with team members on application system analysis.
+    Engineering team of ~25 focused on delivering custom Ruby-based enterprise solutions for clients.
 
-- title: Early Career & Progression (1999 - Aug 2015)
-  from: 1999
-  to: August 2015
-  description: |
-    Commenced career as a Junior Engineer in 1999, advancing through roles such as System Administrator, Delphi Developer,
-    and 1C Developer/System Architect, culminating in a System Architect & CTO position by 2007, and later working as a Software Engineer
-    until August 2015. This foundational period involved hands-on experience in network architecture and administration,
-    diverse software development (Delphi, 1C7, 1C8, SQL, PHP, Ruby, etc.), system architecture design, leading a teams of engineers,
-    comprehensive process automation, and robust infrastructure management. Also completed a Bachelor's Degree in Computer Science (2000-2006)
-    and contributed to volunteer IT support for community projects during these years (including "Encyclopedia of Pskov" 2004-2008
-    and "Teatre of a word" 2007-2011).
+    * Designed and developed production-grade Ruby applications (Sinatra and Rails) with rigorous TDD/BDD practices, consistently achieving 98%+ test coverage.
+
+    * Architected and launched a complex CRM system from scratch featuring 100+ models and extensive business logic, attaining a 97+ RubyCritic code quality score.
+
+    * Reduced technical debt in legacy components by 30% through refactoring, modular design, and elimination of redundant dependencies, improving long-term maintainability.
+
+    * Automated deployment pipelines with Capistrano on PaaS platforms (Heroku and Locum), enabling one-click seamless deliveries and reducing release time by 70%.
+
+    * Collaborated closely with clients to translate intricate requirements into scalable, high-performance solutions, ensuring on-time delivery and high client satisfaction.

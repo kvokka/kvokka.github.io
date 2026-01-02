@@ -1,7 +1,7 @@
 ### Site Settings ###
-title               : Kvokka's blog
+title               : Mike Beliakov
 description         : >-
-                      AI, LLM's, Clouds and how all it mixes.
+                      Senior Site Reliability Engineer and AI Evangelist with over 20 years of experience. Expert in designing scalable, cloud-native infrastructure on Google Cloud and Kubernetes, with a specialized focus on integrating production-grade AI and LLM solutions.
 baseurl             : "/"            # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : kvokka/kvokka.github.io      # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : yousinix/portfolYOU
@@ -24,8 +24,8 @@ nav_exclude:                                            # The following paths ar
 
 ### Author Info ###
 author:
-  name              : Mike Belyakov
-  image             : https://media.licdn.com/dms/image/v2/D5603AQHBEWo2MLRwYA/profile-displayphoto-shrink_800_800/B56ZOAdGDcGsAc-/0/1733026931402?e=1752710400&v=beta&t=-KCVLwHLM7UDHH61GKK6wOgX7egnPCQo-8G4QPDhfqA
+  name              : Mike Beliakov
+# image             : https://media.licdn.com/dms/image/v2/D5603AQHBEWo2MLRwYA/profile-displayphoto-shrink_800_800/B56ZOAdGDcGsAc-/0/1733026931402?e=1752710400&v=beta&t=-KCVLwHLM7UDHH61GKK6wOgX7egnPCQo-8G4QPDhfqA
 # behance           : your_username
 # dribbble          : your_username
   email             : kvokka@yahoo.com

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }} - Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --text-color: #333;
+            --secondary-text: #666;
+            --accent-color: #3498db;
+            --border-color: #eee;
+            --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1000px;
+            /* Wider for screen */
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 40px 60px;
+        }
+
+        /* Header */
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left h1 {
+            font-size: 36px;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .header-left h2 {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--secondary-text);
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 13px;
+        }
+
+        .contact-item {
+            margin-bottom: 5px;
+        }
+
+        .contact-item a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .contact-item i {
+            width: 20px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 25px;
+        }
+
+        h3.section-title {
+            font-size: 16px;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Summary */
+        .summary p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        /* Experience */
+        .job-item {
+            margin-bottom: 20px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--primary-color);
+        }
+
+        .job-company {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .job-meta {
+            color: var(--secondary-text);
+            font-size: 13px;
+            font-style: italic;
+        }
+
+        .job-desc {
+            margin-top: 5px;
+        }
+
+        .job-desc p {
+            margin-bottom: 5px;
+        }
+
+        .job-desc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .job-desc li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 3px;
+        }
+
+        .job-desc li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .skill-category strong {
+            display: block;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: #f0f2f5;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            border: 1px solid #e1e4e8;
+        }
+
+        /* Certifications & Education */
+        .cert-item,
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .cert-name,
+        .edu-degree {
+            font-weight: 600;
+        }
+
+        /* Print Media Query */
+        @media print {
+            @page {
+                margin: 20mm 20mm 20mm 20mm;
+                size: A4;
+            }
+
+            body {
+                background: white;
+                font-size: 11pt;
+                /* Optimized for print reading */
+                -webkit-print-color-adjust: exact;
+            }
+
+            .container {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+                padding: 0 15px;
+                box-shadow: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            /* Optional: Reveal links if needed, but usually ugly for CVs
+            a[href]:after {
+                content: " (" attr(href) ")";
+                font-size: 0.8em;
+            } */
+
+            .header-left h1 {
+                color: black;
+            }
+
+            header {
+                border-bottom: 2px solid black;
+            }
+
+            h3.section-title {
+                color: black;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .skill-tag {
+                background: none;
+                border: none;
+                padding: 0;
+                margin-right: 10px;
+            }
+
+            .skill-tag::after {
+                content: ",";
+            }
+
+            .skill-tag:last-child::after {
+                content: "";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <h1>{{ site.author.name }}</h1>
+                <h2>Infrastructure Architect | AI Evangelist | SRE</h2>
+            </div>
+            <div class="header-right">
+                {% if site.author.email %}
+                <div class="contact-item">
+                    <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> <i class="fas fa-envelope"></i>
+                </div>
+                {% endif %}
+                {% if site.author.linkedin %}
+                <div class="contact-item">
+                    <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank">linkedin.com/in/{{
+                        site.author.linkedin }}</a> <i class="fab fa-linkedin"></i>
+                </div>
+                {% endif %}
+                {% if site.author.github %}
+                <div class="contact-item">
+                    <a href="https://github.com/{{ site.author.github }}" target="_blank">github.com/{{
+                        site.author.github }}</a> <i class="fab fa-github"></i>
+                </div>
+                {% endif %}
+                <div class="contact-item">
+                    <span>London, UK (Open to Remote)</span> <i class="fas fa-map-marker-alt"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <section class="summary">
+            <h3 class="section-title">Professional Summary</h3>
+            <p>{{ site.data.profile.summary }}</p>
+        </section>
+
+        <!-- Skills -->
+        <section class="skills">
+            <h3 class="section-title">Technical Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>Core Competencies</strong>
+                    <ul class="skill-list">
+                        <li class="skill-tag">Site Reliability Engineering (SRE)</li>
+                        <li class="skill-tag">Platform Engineering</li>
+                        <li class="skill-tag">Cloud Architecture</li>
+                        <li class="skill-tag">DevOps</li>
+                        <li class="skill-tag">AI/LLM Integration</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <strong>Programming</strong>
+                    <ul class="skill-list">
+                        {% for skill in site.data.programming-skills limit:7 %}
+                        <li class="skill-tag">{{ skill.name }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <strong>Cloud & Infrastructure</strong>
+                    <ul class="skill-list">
+                        {% for skill in site.data.other-skills %}
+                        <li class="skill-tag">{{ skill.name }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <strong>Tools & Platforms</strong>
+                    <ul class="skill-list">
+                        <li class="skill-tag">Kubernetes (GKE, EKS)</li>
+                        <li class="skill-tag">Terraform</li>
+                        <li class="skill-tag">Ansible</li>
+                        <li class="skill-tag">Datadog</li>
+                        <li class="skill-tag">Prometheus</li>
+                        <li class="skill-tag">GitHub Actions</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <strong>Spoken Languages</strong>
+                    <ul class="skill-list">
+                        {% for lang in site.data.human-languages %}
+                        <li class="skill-tag">{{ lang.name }} ({{ lang.level }})</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="experience">
+            <h3 class="section-title">Professional Experience</h3>
+
+            {% for job in site.data.timeline %}
+            <div class="job-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">{{ job.title }}</span>
+                        <span class="job-company"> | {{ job.subtitle }}</span>
+                    </div>
+                    <span class="job-meta">{{ job.from }} – {{ job.to }}</span>
+                </div>
+                <div class="job-desc">
+                    {{ job.description | markdownify }}
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+
+        <!-- Certifications -->
+        <section class="certifications">
+            <h3 class="section-title">Certifications & Awards</h3>
+            {% for cert in site.data.certifications %}
+            <div class="cert-item">
+                <span class="cert-name">
+                    {% if cert.url %}
+                    <a href="{{ cert.url }}" target="_blank" style="color: inherit; text-decoration: underline;">{{
+                        cert.name }}</a>
+                    {% else %}
+                    {{ cert.name }}
+                    {% endif %}
+                </span>
+                <span class="job-meta">{{ cert.issuer }}</span>
+            </div>
+            {% endfor %}
+        </section>
+
+        <!-- Education -->
+        <section class="education">
+            <h3 class="section-title">Education</h3>
+            <div class="edu-item">
+                <div>
+                    <span class="edu-degree">Bachelor's Degree in Computer Science</span>
+                    <br>
+                    <span class="job-meta">Pskov Volny Institute</span>
+                </div>
+                <span class="job-meta">2001 - 2007</span>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
