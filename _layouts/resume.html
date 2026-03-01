@@ -261,10 +261,48 @@
                 content: "";
             }
         }
+
+        /* Download Button */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: var(--font-main);
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .download-btn-wrapper {
+            text-align: center;
+            padding: 20px 0 10px;
+        }
+
+        @media print {
+            .download-btn-wrapper {
+                display: none;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <div class="download-btn-wrapper">
+        <button class="download-btn" onclick="window.print()">
+            <i class="fas fa-file-pdf"></i> Download CV as PDF
+        </button>
+    </div>
     <div class="container">
         <header>
             <div class="header-left">
