@@ -1,17 +1,21 @@
 - title: Senior Site Reliability Engineer
   subtitle: Checkatrade (London Area, United Kingdom)
   from: September 2025
-  to: present
+  to: February 2026
   description: |
     Platform serving 100,000+ daily active users with 100+ engineering team members, 100+ repositories and microservices, primarily on GCP in a multi-cloud environment.
 
-    * Reduced false-positive incident creation by 98% through advanced alerting rules and signal correlation in Datadog and Prometheus.
+    * Eliminated 98% of false-positive incidents by engineering advanced alerting rules and signal correlation across Datadog and Prometheus — turning noisy pagers into actionable signals.
 
-    * Overhauled Cloudflare filtering and security rules, improving traffic routing accuracy and reducing attack surface exposure.
+    * Replaced Crossplane's Datadog integration with the Datadog Operator, eliminating a fragile custom abstraction layer and establishing a first-class, vendor-supported observability control plane.
 
-    * Simplified and consolidated GitHub Actions workflows, cutting pipeline maintenance overhead by 60% and accelerating feedback loops.
+    * Hardened platform security through multiple targeted Cloudflare WAF rule adjustments, reducing attack surface exposure and improving traffic routing precision.
 
-    * Leading migration from end-of-life Crossplane to Datadog Operator and GCP Config Connector for more sustainable infrastructure management (in progress).
+    * Pioneered a self-service Resources Registry for humans and AI agents, establishing the foundation for a unified, queryable catalog of infrastructure resources.
+
+    * Replaced Atlantis with Digger for Terraform PR automation, resolving persistent lock contention and plan reliability issues that had been a recurring source of team friction.
+
+    * Simplified and consolidated GitHub Actions workflows, cutting pipeline maintenance overhead by 60% and accelerating developer feedback loops.
 
 - title: Chief Executive Officer
   subtitle: Umum (Tbilisi, Georgia)
