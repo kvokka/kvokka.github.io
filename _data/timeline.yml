@@ -1,9 +1,17 @@
-- title: Senior Site Reliability Engineer
+- title: Senior Site Reliability Engineer -> Senior AI Engineer
   subtitle: Checkatrade (London Area, United Kingdom)
   from: September 2025
-  to: March 2026
+  to: present
   description: |
     Platform serving 100,000+ daily active users with 100+ engineering team members, 100+ repositories and microservices, primarily on GCP in a multi-cloud environment.
+
+    * Designed and implemented production-grade microservices architecture in Python and TypeScript, integrating state-of-the-art AI models (LLMs, embeddings, RAG pipelines) for intelligent automation and data processing.
+
+    * Automated full development lifecycle with GitHub Actions, Terraform, and GCP-native services, enabling rapid iteration and one-click deployments.
+
+    * Optimized inference pipelines for performance and cost
+
+    * Developed custom AI agents and tools combining multiple modalities (text, vision, structured data), delivering high-accuracy solutions for complex real-world use cases.
 
     * Eliminated 98% of false-positive incidents by engineering advanced alerting rules and signal correlation across Datadog and Prometheus — turning noisy pagers into actionable signals.
 
@@ -16,23 +24,6 @@
     * Replaced Atlantis with Digger for Terraform PR automation, resolving persistent lock contention and plan reliability issues that had been a recurring source of team friction.
 
     * Simplified and consolidated GitHub Actions workflows, cutting pipeline maintenance overhead by 60% and accelerating developer feedback loops.
-
-- title: Chief Executive Officer
-  subtitle: Umum (Tbilisi, Georgia)
-  from: July 2025
-  to: present
-  description: |
-    Building advanced AI-driven solutions and cloud-native microservices on GCP, leveraging modern AI frameworks and tools for end-to-end development and deployment.
-
-    * Designed and implemented production-grade microservices architecture in Python and TypeScript, integrating state-of-the-art AI models (LLMs, embeddings, RAG pipelines) for intelligent automation and data processing.
-
-    * Deployed scalable, serverless and containerized workloads on GCP (Cloud Run, GKE Autopilot, Vertex AI), achieving cost-efficient auto-scaling and near-zero maintenance overhead.
-
-    * Automated full development lifecycle with GitHub Actions, Terraform, and GCP-native services, enabling rapid iteration and one-click deployments.
-
-    * Optimized inference pipelines for performance and cost, reducing latency by 60%+ and token expenses through prompt engineering, caching, and model quantization techniques.
-
-    * Developed custom AI agents and tools combining multiple modalities (text, vision, structured data), delivering high-accuracy solutions for complex real-world use cases.
 
 - title: Senior Site Reliability Engineer
   subtitle: Legend (United Kingdom)
